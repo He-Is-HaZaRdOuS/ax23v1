@@ -55,6 +55,9 @@ Replace <path_to_firmware_file> with the path to your Archer AX23 firmware file.
 Watch out for the boot message to enter the failsafe mode.
 Press `Ctrl + A` followed by `X` to exit the emulation.
 
+Screenshot of the failsafe mode:
+![Alt text](screenshots/failsafemode.png)
+
 ## Notes
 - This procedure is based on the Archer AX23 firmware and may require modifications for other firmware versions.
 - This procedure is intended for educational purposes only.
