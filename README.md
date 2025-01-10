@@ -25,7 +25,7 @@ Follow the installation instructions provided in the repository to set up the to
     ```bash
     ./fat.py <path_to_firmware_file>
 
-Replace <path_to_firmware_file> with the path to your Archer AX23 firmware file.
+Replace <path_to_firmware_file> with the path to your Archer AX23 binary firmware file.
 
 2.  **Mount the Filesystem Image for Repairs**
     If we attempt to emulate the firmware at this point, we will encounter an error due to filesystem corruption.
@@ -89,7 +89,7 @@ Replace <path_to_firmware_file> with the path to your Archer AX23 firmware file.
     In this case, the kernel file is named `vmlinux-3.18.109-malta-le`.
 
 #### Example line to replace
-  ${QEMU} -m 256 -M ${QEMU_MACHINE} -kernel ${KERNEL} \
+  ${QEMU} -m 256 -M ${QEMU_MACHINE} -kernel ${KERNEL}
 
 ##### Replace with
   ${QEMU} -m 256 -M ${QEMU_MACHINE} -kernel <path_to_new_kernel_file>
@@ -98,7 +98,7 @@ Replace <path_to_firmware_file> with the path to your Archer AX23 firmware file.
     Start the emulation using the following command:
 
     ```bash
-    ./run.sh <image_id>
+    ./run.sh
 
 Watch out for the boot message to enter the failsafe mode.
 Press `Ctrl + A` followed by `X` to exit the emulation.
@@ -116,4 +116,3 @@ References:
 - [Firmadyne](https://github.com/firmadyne/firmadyne)
 - [EMUX (Formerly ARMX)](https://github.com/therealsaumil/emux)
 - [TP-Link Archer AX23 Firmware](https://www.tp-link.com/us/support/download/archer-ax23/#Firmware)
-```
